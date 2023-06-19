@@ -1,0 +1,70 @@
+<html>
+    <body>
+        <h1>
+            NCAA Basketball Tournament Qualification Predictive Model
+        </h1>
+
+        <h3>
+            Prediction(s)
+        </h3>
+        <p>
+            {{ res }}
+        </p>
+        
+        <br>
+
+        <p>
+            <b>To predict if a team (or teams) will qualify for the NCAA tournament, please go back and upload a .csv file with the following schema.</b>
+        </p>
+        <p>
+            G, W, L, W-L%, SRS, SOS, W.1, L.1, W.2, L.2, W.3,
+            L.3, Tm., Opp., FTr, 3PAr, TS%, TRB%, AST%, BLK%,
+            eFG%, TOV%, FT/FGA, Conf_Rk, Conf
+        </p>
+        <ul>
+            <li>G:  Overall Games</li>
+            <li>W:  Overall Wins</li>
+            <li>L:  Overall Losses</li>
+            <li>W-L%:  Overall Win-Loss percentage</li>
+            <li>SRS:  Simple Rating System - A rating that takes into account average point differential and strength of schedule. The rating is denominated in points above/below average, where zero is average. Non-Division I games are excluded from the ratings.</li>
+            <li>SOS:  Strength of Schedule - A rating of strength of schedule. The rating is denominated in points above/below average, where zero is average. Non-Division I games are excluded from the ratings.</li>
+            <li>W.1:  Conference Wins</li>
+            <li>L.1:  Conference Losses</li>
+            <li>W.2:  Home Wins</li>
+            <li>L.2:  Home Losses</li>
+            <li>W.3:  Away Wins</li>
+            <li>L.3:  Away Losses</li>
+            <li>Tm.:  Total Team Points Scored</li>
+            <li>Opp.:  Total Opponent Points Scored</li>
+            <li>FTr:  Free Throw Attempt Rate - Number of FT Attempts Per FG Attempt</li>
+            <li>3PAr:  3-Point Attempt Rate - Percentage of FG Attempts from 3-Point Range</li>
+            <li>TS%:  True Shooting Percentage - A measure of shooting efficiency that takes into account 2-point field goals, 3-point field goals, and free throws.</li>
+            <li>TRB%:  Total Rebound Percentage - An estimate of the percentage of available rebounds a player grabbed while they were on the floor.</li>
+            <li>AST%:  Assist Percentage - An estimate of the percentage of teammate field goals a player assisted while they were on the floor.</li>
+            <li>BLK%:  Block Percentage - An estimate of the percentage of opponent two-point field goal attempts blocked by the player while they were on the floor.</li>
+            <li>eFG%:  Effective Field Goal Percentage - This statistic adjusts for the fact that a 3-point field goal is worth one more point than a 2-point field goal.</li>
+            <li>TOV%:  Turnover Percentage - An estimate of turnovers per 100 plays.</li>
+            <li>FT/FGA:  Free Throws Per Field Goal Attempt</li>
+            <li>Conf_Rk:  Conference rank</li>
+            <li>Conf:  Conference - 'WAC', 'MAC', 'SEC', 'SWAC', 'CAA', 'Southern', 'Pac-10',
+                'Sun Belt', 'Patriot', 'OVC', 'SWC', 'MEAC', 'Big Sky', 'Big East',
+                'NAC', 'MVC', 'Ivy', 'MW Coll', 'Big West', 'Big South', 'MAAC',
+                'TAAC', 'Metro', 'GMWC', 'ACC', 'Mid-Cont', 'Big 8', 'NEC', 'WCC',
+                'Big Ten', 'Southland', 'A-10', 'ECC', 'AWC', 'CUSA', 'Big 12',
+                'AEC', 'MWC', 'A-Sun', 'Horizon', 'Summit', 'GWC', 'Pac-12', or 'AAC'</li>
+        </ul>
+        <!-- <form method=post enctype=multipart/form-data>
+            <input type="file" id="ufile" name="ufile"><br><br>
+
+            <input type="submit" value="Upload">
+        </form> -->
+        <form action="/">
+            <button>Go Back</button>
+        </form>
+        <p>
+            This model was trained using the data available at <a href="https://www.sports-reference.com/">sports-reference.com</a>.
+        </p>
+
+    </body>
+
+</html>
